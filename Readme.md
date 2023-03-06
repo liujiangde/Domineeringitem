@@ -1,3 +1,4 @@
+```js
 react-ts-template
 ├── yarn.lock # 锁定 npm 包依赖版本文件
 ├── package.json
@@ -24,7 +25,7 @@ react-ts-template
 │ ├── index.tsx # 项目入口文件
 │ ├── index.scss # 项目入口引入的scss
 └── tsconfig.json # TS 配置文件
-
+```
 
 
 参考链接 https://juejin.cn/post/7020972849649156110
