@@ -4,20 +4,26 @@
   "description": "none",
   "main": "index.tsx",
   "scripts": {
+    "lint": "eslint src/**/*.{ts,tsx} -f html --cache -o ./eslintError.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "start": "webpack serve --config webpack/webpack.dev.js",
     "build": "webpack --config webpack/webpack.dev.js",
     "build:prod": "cross-env NODE_ENV=prod webpack --config webpack/webpack.prod.js"
   },
+  "husky": {
+      "hooks": {
+        "pre-commit": "npm run lint"
+      }
+  },
   "lint-staged": {
-      "*.{ts,tsx}": [
-          "yarn run lint",
-          "git add --force"
-      ],
-      "*.{md,json}": [
-          "git add --force"
-      ]
+    "*.{ts,tsx}": [
+      "npm run lint",
+      "git add --force"
+    ],
+    "*.{md,json}": [
+      "git add --force"
+    ]
   },
   "repository": {
     "type": "git",
