@@ -14,13 +14,13 @@ const config = {
   // webpack 提取这些 source map，并内联到最终的 bundle 中。
   devtool: 'inline-source-map',
   output: {
-    path: DIST_PATH,
-    filename: IS_DEV ? 'js/[name].bundle.js' : 'js/[name].[contenthash:8].bundle.js',
-    publicPath: getCDNPath(),
-    globalObject: 'this',
-    chunkFilename: IS_DEV ? 'js/[name].chunk.js' : 'js/[name].[contenthash:8].chunk.js',
-    assetModuleFilename: 'assets/[hash][ext][query]',
-    clean: true,
+    path: path.resolve(__dirname, '../', 'dist'), // 有待优化 没有分包
+    filename: 'bundle.js', // 有待优化
+    // publicPath: getCDNPath(),
+    // globalObject: 'this',
+    // chunkFilename: IS_DEV ? 'js/[name].chunk.js' : 'js/[name].[contenthash:8].chunk.js',
+    // assetModuleFilename: 'assets/[hash][ext][query]',
+    // clean: true,
   },
   module: {
     rules: [

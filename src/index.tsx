@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
 import { render } from 'react-dom';
-import "./index.scss";
+import './index.scss';
 
 try {
-    const rootElement = document.getElementById('root');
-    console.log("运行");
-    const App = () => {
-        return <div className="hello">Hello</div>
-    };
-    render(<App />, rootElement)
+  const rootElement = document.getElementById('root');
+  console.log('运行');
+  const App = () => <div className="hello">Hello</div>;
+  render(<App />, rootElement);
 } catch (e) {
-    console.log('e', e);
+  console.log('e', e);
 }
