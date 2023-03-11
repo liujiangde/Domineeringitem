@@ -11,6 +11,8 @@ const config = {
   entry: {
     index: path.join(SRC_PATH, 'index.tsx'),
   },
+  // webpack 提取这些 source map，并内联到最终的 bundle 中。
+  devtool: 'inline-source-map',
   output: {
     path: DIST_PATH,
     filename: IS_DEV ? 'js/[name].bundle.js' : 'js/[name].[contenthash:8].bundle.js',
@@ -20,9 +22,49 @@ const config = {
     assetModuleFilename: 'assets/[hash][ext][query]',
     clean: true,
   },
-  //loader的执行顺序默认从右到左，多个loader用[],字符串只用一个loader，也可以是对象的格式
   module: {
-   //各种loader规则配置
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
+      {
+        test: /\.tsx?$/,
+        use: {
+          loader: 'ts-loader',
+        },
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$|\.scss$/i,
+        include: [SRC_PATH],
+        exclude: /node_modules/, // 取消匹配node_modules里面的文件
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: false,
+              sourceMap: !IS_PRO,
+            },
+          },
+          'postcss-loader',
+          'sass-loader',
+          {
+            loader: 'style-resources-loader',
+            options: {
+              patterns: path.resolve(SRC_PATH, 'assets', 'css', 'core.scss'),
+            },
+          },
+        ],
+      },
+    ],
   },
   resolve: resolveConfig,
   plugins: plugins.getPlugins(),

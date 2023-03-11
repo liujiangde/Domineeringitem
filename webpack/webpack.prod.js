@@ -5,7 +5,7 @@ const variable = require('./webpackUtils/variable');
 
 const config = {
   mode: 'production',
-  cache: { type: 'filesystem', buildDependencies: { config: [__filename] } },//使用文件缓存
+  cache: { type: 'filesystem', buildDependencies: { config: [__filename] } }, //使用文件缓存
   optimization: {
     minimize: true, //开启压缩
     moduleIds: 'deterministic', //单独模块id，模块内容变化再更新
