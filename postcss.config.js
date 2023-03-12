@@ -12,4 +12,4 @@ module.exports = {
       selectorBlackList: ['.ig-'], // 忽略的选择器   .ig-  表示 .ig- 开头的都不会转换
     }),
   ],
-};
+}

@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require('path')
 //变量配置工具类
-const variable = require('./webpackUtils/variable');
+const variable = require('./webpackUtils/variable')
 //别名工具类
-const resolveConfig = require('./webpackUtils/resolve');
+const resolveConfig = require('./webpackUtils/resolve')
 //公用插件工具类
-const plugins = require('./webpackUtils/plugins');
-const { SRC_PATH, DIST_PATH, IS_DEV, IS_PRO, getCDNPath } = variable;
+const plugins = require('./webpackUtils/plugins')
+const { SRC_PATH, DIST_PATH, IS_DEV, IS_PRO, getCDNPath } = variable
 
 const config = {
   entry: {
@@ -68,6 +68,6 @@ const config = {
   },
   resolve: resolveConfig,
   plugins: plugins.getPlugins(),
-};
+}
 
-module.exports = config;
+module.exports = config

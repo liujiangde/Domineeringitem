@@ -1,9 +1,9 @@
-const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
-const variable = require('./webpackUtils/variable');
+const webpack = require('webpack')
+const webpackMerge = require('webpack-merge')
+const baseConfig = require('./webpack.base')
+const variable = require('./webpackUtils/variable')
 
-const { DIST_PATH } = variable;
+const { DIST_PATH } = variable
 
 const config = {
   mode: 'development',
@@ -26,7 +26,7 @@ const config = {
     //   },
     // },
   },
-};
-const mergedConfig = webpackMerge.merge(baseConfig, config);
+}
+const mergedConfig = webpackMerge.merge(baseConfig, config)
 
-module.exports = mergedConfig;
+module.exports = mergedConfig
