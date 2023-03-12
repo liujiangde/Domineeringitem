@@ -8,7 +8,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   // 使用 airbnb 拓展插件规范相关库
   // prettier 已内置了许多相关插件
-  extends: ['airbnb-typescript', 'prettier'],
+  extends: ['airbnb-typescript', 'prettier', 'plugin:@typescript-eslint/recommended'],
   // 拓展和支持相关能力的插件库
   plugins: ['prettier', 'react', 'react-hooks', 'jsx-a11y', '@typescript-eslint'],
   env: {
@@ -51,7 +51,11 @@ module.exports = {
 
   rules: {
     'jsx-no-lambda': 0,
-    semi: [2, 'always'],
+    // 行尾不加分号
+    'no-extra-semi': 'off',
+    '@typescript-eslint/no-extra-semi': 'warn',
+    // 没有使用的变量警告
+    'no-unused-vars': 'off',
     // 命名的约定
     '@typescript-eslint/naming-convention': 'warn',
     '@typescript-eslint/interface-name-prefix': 0,
@@ -59,6 +63,8 @@ module.exports = {
     'object-shorthand': [0, 'never'],
     //单引号
     quotes: 'off',
+    // 未使用的constructor告警
+    '@typescript-eslint/no-useless-constructor': 'warn',
     '@typescript-eslint/quotes': 'off',
     '@typescript-eslint/no-var-requires': 0,
     'member-ordering': 0,
