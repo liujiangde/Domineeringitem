@@ -52,6 +52,8 @@ module.exports = {
   rules: {
     'jsx-no-lambda': 0,
     semi: [2, 'always'],
+    // 命名的约定
+    '@typescript-eslint/naming-convention': 'warn',
     '@typescript-eslint/interface-name-prefix': 0,
     '@typescript-eslint/no-empty-interface': 0,
     'object-shorthand': [0, 'never'],
