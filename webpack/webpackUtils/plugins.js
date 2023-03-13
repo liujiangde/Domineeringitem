@@ -18,10 +18,11 @@ function getHTMLPlugins() {
     // hash: true, // 会在打包好的bundle.js后面加上hash串
     title: '',
     minify: {
+      // removeAttributeQuotes: true,
       removeComments: true, // 删除注释
-      collapseWhitespace: true,
+      collapseWhitespace: true, // 去空格
       minifyCSS: true, // 压缩 HTML 中出现的 CSS 代码
-      minifyJS: true, // 压缩 HTML 中出现的 JS 代码
+      minifyJS: true, // 压缩 HTML 中出现的 JS 代码 在脚本元素和事件属性中缩小JavaScript(使用UglifyJS)
     },
   });
 

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react'; =>   "jsx": "react-jsx", // 这里改成react-jsx，就不需要在tsx文件中手动引入React了
 import { render } from 'react-dom';
 import './index.scss';
 
