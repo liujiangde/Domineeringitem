@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 //读取prettier配置
-const prettierOptions = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'));
+const prettierOptions = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'))
 
 module.exports = {
   root: true,
@@ -51,10 +51,12 @@ module.exports = {
 
   rules: {
     'jsx-no-lambda': 0,
-    semi: [2, 'always'],
+    semi: [2, 'never'],
     '@typescript-eslint/interface-name-prefix': 0,
     '@typescript-eslint/no-empty-interface': 0,
     'object-shorthand': [0, 'never'],
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'warn',
     //单引号
     quotes: 'off',
     '@typescript-eslint/quotes': 'off',
@@ -170,4 +172,4 @@ module.exports = {
     eruda: false,
     Stats: false,
   },
-};
+}
