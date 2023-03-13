@@ -18,7 +18,8 @@
     /* react 模式下：直接将 JSX 编译成 JS，会生成 React.createElement 的形式，在使用前不需要再进行转换操作了，输出文件的扩展名为 .js */
     /* preserve 模式下：不会将 JSX 编译成 JS，生成代码中会保留 JSX，以供后续的转换操作使用（比如：Babel）。 另外，输出文件会带有 .jsx 扩展名 */
     /* react-native 模式下：相当于 preserve，它也保留了所有的 JSX，但是输出文件的扩展名是 .js */
-    "jsx": "react", // 在.tsx文件中支持JSX
+    // "jsx": "react", // 在.tsx文件中支持JSX
+    "jsx": "react-jsx", // 这里改成react-jsx，就不需要在tsx文件中手动引入React了
     "sourceMap": true, // 生成相应的.map文件
     "declaration": true, // 生成相应的.d.ts文件
     "allowUmdGlobalAccess": true,
