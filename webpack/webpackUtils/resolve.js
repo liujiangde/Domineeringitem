@@ -3,7 +3,7 @@ const variable = require('./variable')
 const { SRC_PATH, ROOT_PATH } = variable
 
 module.exports = {
-  extensions: ['.tsx', '.ts', '.js', '.json'],
+  extensions: ['.tsx', '.ts', '.js', '.json', '.jsx'],
   modules: [path.resolve(ROOT_PATH, 'node_modules')],
   // 查找 package.json main
   mainFields: ['main'],

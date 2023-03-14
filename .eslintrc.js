@@ -61,6 +61,8 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 0,
     '@typescript-eslint/no-empty-interface': 0,
     'object-shorthand': [0, 'never'],
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'warn',
     //单引号
     quotes: 'off',
     // 未使用的constructor告警
