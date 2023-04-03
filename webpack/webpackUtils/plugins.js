@@ -1,4 +1,5 @@
 // const cleanWebpackPlugin = require("clean-webpack-plugin") ;
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const CopyPlugin = require("copy-webpack-plugin");
@@ -24,6 +25,9 @@ function getHTMLPlugins() {
       minifyCSS: true, // 压缩 HTML 中出现的 CSS 代码
       minifyJS: true, // 压缩 HTML 中出现的 JS 代码 在脚本元素和事件属性中缩小JavaScript(使用UglifyJS)
     },
+  })
+  const definePlugin = new webpack.DefinePlugin({
+    'process.env': JSON.stringify(process.env),
   })
 
   return [indexHtmlPlugin]

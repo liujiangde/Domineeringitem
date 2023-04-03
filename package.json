@@ -12,9 +12,9 @@
     "build:prod": "cross-env NODE_ENV=prod webpack --config webpack/webpack.prod.js"
   },
   "husky": {
-      "hooks": {
-        "pre-commit": "npm run lint"
-      }
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/liujiangde/Domineeringitem#readme",
   "devDependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.0",
     "@babel/plugin-proposal-decorators": "^7.21.0",
@@ -51,6 +52,7 @@
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "ahooks": "^3.7.6",
     "babel-loader": "^9.1.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
@@ -81,11 +83,16 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@types/antd": "^1.0.0",
+    "classnames": "^2.3.2",
     "dotenv-webpack": "^8.0.1",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.7.3",
+    "openai": "^3.2.1",
     "postcss-loader": "^7.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-use": "^17.4.0",
     "sass": "^1.59.2",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
