@@ -1,5 +1,6 @@
 const a = 23
-
+const b = 'addd'
+const bb = new String('bb')
 console.log(Object.getOwnPropertyNames(a))
 const as = {
   asd: 'as',
@@ -18,4 +19,3 @@ console.log(fun, 'fun')
 console.log(Object)
 console.log(Function instanceof Object)
 console.log(Object instanceof Function)
-

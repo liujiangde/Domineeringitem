@@ -15,7 +15,16 @@
   margin: 16px;
   background: rgba(255, 255, 255, 0.3);
 }
-.layout-sider{
+.layout-right{
   height: 100vh;
   overflow-y: auto;
+  .layout-r-header{
+    display: flex;
+  }
+}
+.layout-Content{
+  overflow: 'auto';
+  margin: 0 12px;
+  padding: 0px;
+  min-height: 280px;
 }
