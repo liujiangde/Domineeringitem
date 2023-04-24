@@ -62,5 +62,5 @@ sort(compareFn) 改变原数组   compareFn的返回值为false 不调换位置
 splice(start, deleteCount, item1, item2, itemN) 改变原数组
 
 with(index, value) 其中给定索引处的元素替换为给定值。 返回一个新数组  元素index替换为 的新数组value。
-该with()方法总是创建一个密集数组。
+该with()方法总是创建一个密集数组（空元素的是变成undifined）。
 
