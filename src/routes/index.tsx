@@ -22,7 +22,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <Navigate to="home" />,
+        element: <Navigate to="/home" />,
       },
       {
         path: '/home',
