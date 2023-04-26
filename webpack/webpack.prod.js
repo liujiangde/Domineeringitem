@@ -1,6 +1,6 @@
 const webpackMerge = require('webpack-merge')
-const baseConfig = require('./webpack.base')
-const variable = require('./webpackUtils/variable')
+const baseConfig = require('./webpack.base.js')
+const variable = require('./webpackUtils/variable.js')
 // const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const config = {

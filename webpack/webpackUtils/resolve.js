@@ -1,5 +1,5 @@
 const path = require('path')
-const variable = require('./variable')
+const variable = require('./variable.js')
 const { SRC_PATH, ROOT_PATH } = variable
 
 module.exports = {

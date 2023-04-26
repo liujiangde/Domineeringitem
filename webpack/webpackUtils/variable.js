@@ -1,5 +1,5 @@
 const path = require('path')
-const webpackUtils = require('./util')
+const webpackUtils = require('./util.js')
 const dotenv = require('dotenv')
 
 const { config: loadConfig } = dotenv

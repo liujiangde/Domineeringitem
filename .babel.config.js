@@ -29,7 +29,8 @@ module.exports = function (api) {
             "isTSX": true,
             "allExtensions": true
         }
-    ]];
+    ],
+    ];
     const plugins = [ [
         "@babel/plugin-proposal-decorators",
         {

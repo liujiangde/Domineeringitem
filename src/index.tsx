@@ -2,12 +2,17 @@
 // import { render } from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import App from './App'
+import { HashRouter } from 'react-router-dom'
 import './index.css'
 
 try {
   const rootElement = document.getElementById('root')
   const root = createRoot(rootElement)
-  root.render(<App />)
+  root.render(
+    <HashRouter>
+      <App />
+    </HashRouter>,
+  )
 } catch (e) {
   console.log('error', e)
 }

@@ -1,9 +1,11 @@
 // const cleanWebpackPlugin = require("clean-webpack-plugin") ;
+const WebpackBar = require('webpackbar')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const CopyPlugin = require("copy-webpack-plugin");
-const variable = require('./variable')
+const variable = require('./variable.js')
 const DotenvPlugin = require('dotenv-webpack')
 const path = require('path')
 
@@ -38,7 +40,8 @@ function getPlugins() {
   // const cleanPlugin = new CleanWebpackPlugin({
   //     cleanOnceBeforeBuildPatterns: ["**/*", '!dll', '!dll/*.*']
   // });
-
+  // 更加灵活的热更新方案
+  // const HotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin({})
   const miniCssPlugin = new MiniCssExtractPlugin({
     filename: IS_DEV ? 'css/[name].css' : 'css/[name].[contenthash:8].css',
     chunkFilename: IS_DEV ? 'css/[name].chunk.css' : 'css/[name].[contenthash:8].chunk.css',
@@ -51,6 +54,13 @@ function getPlugins() {
     path: ENV_CONFIG_PATH,
   })
 
+  const webpackBarPlugin = new WebpackBar({
+    color: '#85d', // 默认green，进度条颜色支持HEX
+    basic: false, // 默认true，启用一个简单的日志报告器
+    profile: false, // 默认false，启用探查器。
+  })
+
+  const reactRefreshWebpackPlugin = new ReactRefreshWebpackPlugin()
   // const copyPlugin=new CopyPlugin({
   //     patterns: [
   //       { from: path.resolve(SRC_PATH,"assets"), to: path.resolve(DIST_PATH,"assets") },
@@ -63,6 +73,8 @@ function getPlugins() {
     ...getHTMLPlugins(),
     dotenvPlugin,
     miniCssPlugin,
+    webpackBarPlugin,
+    reactRefreshWebpackPlugin,
   ]
 }
 

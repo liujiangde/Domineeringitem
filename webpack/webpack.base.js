@@ -1,10 +1,10 @@
 const path = require('path')
 //变量配置工具类
-const variable = require('./webpackUtils/variable')
+const variable = require('./webpackUtils/variable.js')
 //别名工具类
-const resolveConfig = require('./webpackUtils/resolve')
+const resolveConfig = require('./webpackUtils/resolve.js')
 //公用插件工具类
-const plugins = require('./webpackUtils/plugins')
+const plugins = require('./webpackUtils/plugins.js')
 const { SRC_PATH, DIST_PATH, IS_DEV, IS_PRO, getCDNPath } = variable
 
 const config = {
