@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { IntlProvider } from 'react-intl'
+import { ConfigProvider, Spin } from 'antd'
 import RenderRouter from '@/routes/index'
 import './App.scss'
 
 const App: React.FC = () => (
-  <div className="app-container">
-    <IntlProvider locale={'en-us'}>
+  <ConfigProvider componentSize="middle">
+    <IntlProvider locale={'zh-CN'}>
+      <Suspense fallback={null}>
+        <Spin
+          spinning={false}
+          className="app-loading-wrapper"
+          // tip={<LocaleFormatter id="gloabal.tips.loading" />}
+        />
+        <RenderRouter />
+      </Suspense>
       <RenderRouter />
     </IntlProvider>
-  </div>
+  </ConfigProvider>
 )
 
 export default App

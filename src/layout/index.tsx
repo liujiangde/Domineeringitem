@@ -9,8 +9,20 @@ import { Breadcrumb, Layout, theme } from 'antd'
 const { Sider, Content } = Layout
 import MenuCom from './Menu/index'
 
+/**
+ * @description 页面布局组件
+ * @author 柳江
+ * @date 28/04/2023
+ * @returns {*}
+ */
 const LayoutCom: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false)
+
+  /**
+   * @description 切换侧边栏展示收缩状态
+   * @author 柳江
+   * @date 28/04/2023
+   */
   const changeCollapsed = () => {
     setCollapsed(!collapsed)
   }
