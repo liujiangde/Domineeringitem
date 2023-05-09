@@ -2,7 +2,6 @@ import React from 'react'
 import './index.module.scss'
 import { Menu } from 'antd'
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons'
-
 const MenuCom: React.FC = () => (
   <Menu
     theme="dark"

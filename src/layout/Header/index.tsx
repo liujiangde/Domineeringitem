@@ -13,24 +13,29 @@ const HeaderCom: React.FC<HeaderComProps> = (props: HeaderComProps) => {
   } = theme.useToken()
 
   return (
-    <Header
-      className={classnames('layout-r-header')}
-      style={{ padding: 0, background: colorBgContainer }}
+    <div
+      style={{ marginLeft: collapsed ? 80 : 200, transition: 'all .3s,background 0s' }}
+      className={classnames('header')}
     >
-      {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-        className: 'trigger',
-        onClick: changeCollapsed,
-      })}
-      <Menu
-        theme="dark"
-        mode="horizontal"
-        defaultSelectedKeys={['2']}
-        items={new Array(3).fill(null).map((_, index) => ({
-          key: String(index + 1),
-          label: `nav ${index + 1}`,
-        }))}
-      />
-    </Header>
+      <Header
+        className={classnames('layout-r-header')}
+        style={{ padding: 0, background: colorBgContainer }}
+      >
+        {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+          className: 'trigger',
+          onClick: changeCollapsed,
+        })}
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={['2']}
+          items={new Array(3).fill(null).map((_, index) => ({
+            key: String(index + 1),
+            label: `nav ${index + 1}`,
+          }))}
+        />
+      </Header>
+    </div>
   )
 }
 export default HeaderCom

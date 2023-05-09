@@ -24,6 +24,7 @@ const LayoutCom: React.FC = () => {
    * @date 28/04/2023
    */
   const changeCollapsed = () => {
+    console.log(collapsed)
     setCollapsed(!collapsed)
   }
   const {
@@ -31,13 +32,14 @@ const LayoutCom: React.FC = () => {
   } = theme.useToken()
 
   return (
-    <Layout>
+    <Layout className="layout-contain">
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo" />
         <MenuCom />
       </Sider>
       <Layout className={classnames('layout-right')}>
         <HeaderCom changeCollapsed={changeCollapsed} collapsed={collapsed} />
+        <div className="placeholder">{''}</div>
         <Breadcrumb
           items={[{ key: 'home', path: 'home', title: '/home' }]}
           style={{ margin: '8px 12px' }}
@@ -50,6 +52,7 @@ const LayoutCom: React.FC = () => {
         >
           <Outlet />
         </Content>
+        <div>页面底部</div>
       </Layout>
     </Layout>
   )

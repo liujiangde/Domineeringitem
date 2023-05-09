@@ -1,0 +1,17 @@
+
+.layout-r-header{
+  display: flex;
+}
+.header-position{
+  margin-left: 80px;
+}
+.header {
+  position: absolute;
+  margin-left: 200px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px; /* 头部高度 */
+  background-color: #fff;
+  z-index: 999; /* z-index用于控制元素的层级关系，确保头部元素在页面上方 */
+}
