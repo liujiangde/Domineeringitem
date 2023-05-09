@@ -5,9 +5,24 @@
       "@/*": [
           "src/*"
       ],
+      "@component/*": [
+        "src/component/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@routes/*": [
+        "src/routes/*"
+      ],
+      "@interface/*": [
+        "src/interface/*"
+      ],
       "@images/*": [
           "src/assets/images/*"
       ],
+      "@utils/*": [
+        "src/utils/*"
+    ],
     },
     "typeRoots": ["./typings/*.d.ts", "node_modules/@types"],
     "allowJs": true, // 允许编译 JavaScript 文件
