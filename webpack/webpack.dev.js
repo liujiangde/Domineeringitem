@@ -15,7 +15,7 @@ const config = {
     // contentBase: DIST_PATH,
     compress: true, //是否启用gzip压缩
     host: 'localhost',
-    port: 3000,
+    port: 30001,
     devMiddleware: {
       index: true,
       publicPath: '/',

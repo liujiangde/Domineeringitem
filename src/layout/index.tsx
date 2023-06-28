@@ -24,7 +24,6 @@ const LayoutCom: React.FC = () => {
    * @date 28/04/2023
    */
   const changeCollapsed = () => {
-    console.log(collapsed)
     setCollapsed(!collapsed)
   }
   const {
@@ -34,7 +33,10 @@ const LayoutCom: React.FC = () => {
   return (
     <Layout className="layout-contain">
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="logo" />
+        <div className="logo">
+          {' '}
+          <h1>dalogo</h1>
+        </div>
         <MenuCom />
       </Sider>
       <Layout className={classnames('layout-right')}>
@@ -52,7 +54,6 @@ const LayoutCom: React.FC = () => {
         >
           <Outlet />
         </Content>
-        <div>页面底部</div>
       </Layout>
     </Layout>
   )

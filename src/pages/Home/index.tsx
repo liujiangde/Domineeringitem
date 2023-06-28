@@ -4,6 +4,7 @@ import StepsDemo from './stepsDemo'
 import UserInput from './userInput'
 import FormDemo from './formDemo'
 import { MoneyType } from './interfaceList'
+import classNames from 'classnames'
 const stepEventListmock = [
   {
     status: 6,
@@ -89,7 +90,7 @@ const stepEventListmock = [
 ]
 
 const Home: React.FC = () => (
-  <div className="home-content">
+  <div className={classNames('home-content1', 'home-content')}>
     <UserInput inputValue={'12'} />
     <br />
     <br />

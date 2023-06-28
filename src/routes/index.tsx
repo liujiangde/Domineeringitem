@@ -33,7 +33,7 @@ const routes: RouteObject[] = [
       },
       {
         path: '*',
-        element: <Layout />,
+        element: <div>还没有开发这个页面哦</div>,
       },
     ],
   },

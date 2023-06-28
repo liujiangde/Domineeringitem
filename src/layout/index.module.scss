@@ -2,6 +2,11 @@
 
 .layout-contain{
   position: relative;
+  .logo{
+    text-align: center;
+    // position: absolute;
+    top: 50%;
+  }
   .placeholder {
     height: 64px;
   }

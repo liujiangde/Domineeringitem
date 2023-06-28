@@ -52,7 +52,7 @@ const FormDemo: React.FC<IFormProps> = () => {
           },
         ]}
       >
-        <Input addonAfter={selectAfter} defaultValue="999" />
+        <Input addonAfter={selectAfter} />
       </Form.Item>
 
       <Form.Item
