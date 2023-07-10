@@ -22,3 +22,6 @@ Linux根目录下面各个文件的作用如下：
 linux 的var文件下的www文件是干嘛的？
 
 在Linux中，/var目录通常包含可变数据，如日志文件、缓存、数据库等。而/var/www目录通常是Web服务器（如Apache）的默认文档根目录，其中包含Web应用程序的文件，如HTML、CSS、JavaScript和图像等。一般来说，Web服务器会将/var/www作为HTTP服务器根目录，将其中的文件提供给客户端通过HTTP请求访问。因此，/var/www是Web服务器存储Web内容的主要目录之一。
+
+
+nginx -t 检查Nginx配置文件语法是否正确 可以知道nginx的配置文件具体位置
